@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleone:{
+var articleone : {
        title:'article one\ Akshat jain';
  heading:'article one';
     date:'2 march 2017';
@@ -18,7 +18,7 @@ var articleone:{
                 </p>
                  <p>
                     this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.
-                </p>"
+                </p>";
 };
 
  function createtemplate(data){
