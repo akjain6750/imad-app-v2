@@ -5,6 +5,59 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articleone :{
+    title:'article one\Akshat jain',
+    heading:'article one',
+    date:'2 march 2017',
+    content: "
+         <p>
+                    this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.
+        </p>
+                 <p>
+                    this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.
+                </p>
+                 <p>
+                    this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.
+                </p>"
+};
+
+ function createtemplate(data){
+  var title=data.title;
+  var date=data.date;
+  var heading=data.heading;
+  var content=data.content;
+  
+  var htmltemplate="
+<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+         <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+        <div>
+        <div>
+            <a href='/'>home</a>
+        <hr/>
+        <h3>
+         ${heading}
+         </h3>
+        <div>
+            ${date}
+            </div>
+            <div>
+                ${content}
+            </div>
+        </div>    
+    </body>
+</html>
+";
+return htmltemplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
