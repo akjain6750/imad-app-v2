@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles ={
+var articles = {
  'article-one' :{
        title: 'article one\ Akshat jain',
  heading:'article one',
@@ -19,7 +19,7 @@ var articles ={
                 </p>
                  <p>
                     this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.
-                </p>"
+                </p> "
 },
  'article-two' :{
        title: 'article two\ Akshat jain',
@@ -48,8 +48,8 @@ var articles ={
   var content=data.content;
   
   var htmltemplate = "
-<html>
-    <head>
+  <html>
+  <head>
         <title>
             ${title}
         </title>
@@ -74,7 +74,7 @@ var articles ={
         </div>    
     </body>
 </html>
-";
+ ";
 
 return htmltemplate;
 }
