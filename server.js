@@ -10,7 +10,7 @@ var articles = {
        title: 'article one\ Akshat jain',
  heading:'article one',
     date:'2 march 2017',
-    content: "
+    content: {
          <p>
                     this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.
         </p>
@@ -19,7 +19,7 @@ var articles = {
                 </p>
                  <p>
                     this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.this is the sontent of first article.
-                </p> "
+                </p> }
 },
  'article-two' :{
        title: 'article two\ Akshat jain',
@@ -47,7 +47,7 @@ var articles = {
   var heading=data.heading;
   var content=data.content;
   
-  var htmltemplate = "
+  var htmltemplate = {
   <html>
   <head>
         <title>
@@ -74,7 +74,7 @@ var articles = {
         </div>    
     </body>
 </html>
- ";
+ };
 
 return htmltemplate;
 }
